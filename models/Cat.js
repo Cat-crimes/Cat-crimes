@@ -8,7 +8,7 @@ const catSchema = new Schema ({
     height: {type: Number, required: true},
     weight: {type: Number, required: true},
     blueEyes: {type: Boolean, required: true},
-    hair: {type: String, enum: [long, striped], required: true},
+    hair: {type: String, enum: ['long', 'striped'], required: true},
     whitePaw:{type: Boolean, required: true},
     hasBow: {type: Boolean, required: true},
     hasBell: {type: Boolean, required: true},  
@@ -37,17 +37,17 @@ const catSchema = new Schema ({
 //     height: {type: Number, required: true},
 //     weight: {type: Number, required: true},
 //     attributes: {
-//         blueEyes: {type: Boolean, required: true},
-//         hair: {type: String, enum: [long, striped], required: true},
-//         whitePaw:{type: Boolean, required: true},
-//         hasBow: {type: Boolean, required: true},
-//         hasBell: {type: Boolean, required: true},  
-//     },
-//     user: {
-//         type: Schema.Types.ObjectId,
-//         ref: 'User',
-//         required: true
-//     }
+//         blueEyes: {type: Boolean},
+//         hair: {type: String, enum: ['long', 'striped']},
+//         whitePaw:{type: Boolean},
+//         hasBow: {type: Boolean},
+//         hasBell: {type: Boolean},  
+//     requiered: true},
+//     // user: {
+//     //     type: Schema.Types.ObjectId,
+//     //     ref: 'User',
+//     //     required: true
+//     // }
 // }, {
 //     timestamps: true,
 //     toJSON: {
@@ -61,6 +61,6 @@ const catSchema = new Schema ({
 //     }
 // })
 
-const Cat = mongoose.model(Cat, catSchema);
+const Cat = mongoose.model('Cat', catSchema);
 
-module.export = Cat;
+module.exports = Cat;
