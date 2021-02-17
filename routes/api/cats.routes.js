@@ -20,6 +20,8 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // const {blueEyes, hair, whitePaw, hasBow, hasBell} = attributes
   const { name, age, race, height, weight, blueEyes, hair, whitePaw, hasBow, hasBell } = req.body;
+  const userID = req.user._id;
+  console.log(user)
 
   if(!name || !age || !race || !height || !weight || !blueEyes || !hair || !whitePaw || !hasBow || !hasBell ) {
     return res.status(400).json({ message: "All fields must be complete"})
@@ -35,8 +37,8 @@ router.post('/', (req, res) => {
     hair,
     whitePaw,
     hasBow,
-    hasBell
-    // user: req.user
+    hasBell,
+    userID
   })
 
   newCat.save()
