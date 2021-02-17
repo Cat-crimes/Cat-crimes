@@ -12,11 +12,11 @@ const catSchema = new Schema ({
     whitePaw:{type: Boolean, required: true},
     hasBow: {type: Boolean, required: true},
     hasBell: {type: Boolean, required: true},  
-    // user: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required: true
-    // }
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 }, {
     timestamps: true,
     toJSON: {
